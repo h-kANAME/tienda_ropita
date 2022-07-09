@@ -1,8 +1,12 @@
 import React from "react";
+import '../App.css';
+import '../css/Prendas.css'
+import PrendasGrid from "./PrendasGrid.tsx";
 
 function Prendas() {
-  return (  <h1>
-    Prendas
-  </h1>)
+  
+  return (  
+    <PrendasGrid/>
+  )
 };
 export default Prendas

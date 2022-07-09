@@ -4,6 +4,7 @@ import './App.css';
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { Grid } from '@mui/material';
+
 import Paper from '@mui/material/Paper';
 import Clientes from './components/Clientes';
 import Prendas from './components/Prendas';
@@ -20,12 +21,12 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
+
 function App() {
   return (
-    <div className="App-header">
       <div className="fixed">
+      <Router>
         <Grid container spacing={15}>
-          <Router>
           <Grid item sm={12}>
           <Link to="/">
             <Item>
@@ -59,17 +60,14 @@ function App() {
               </Item>
           </Link>
           </Grid>
-          <Routes>
+        </Grid>
+        <Routes>
           <Route path="/Prendas" element={<Prendas/>}/>
           <Route path="/Clientes" element={<Clientes/>}/>
           <Route path="/Ventas" element={<Ventas/>}/>
           </Routes>
           </Router>
-        
-        
-        </Grid>
       </div>
-    </div>
   );
 }
 
