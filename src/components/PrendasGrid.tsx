@@ -21,12 +21,12 @@ function createData(
 }
 
 const rows = [
-  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 4),
-  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 4),
-  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 4),
-  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 4),
-  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 4),
-  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 4)
+  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 'Campera'),
+  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 'Campera'),
+  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 'Campera'),
+  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 'Campera'),
+  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 'Campera'),
+  createData('Campera Adidas', 1, 'Campera Gym', 65.00, 'Campera')
 ];
 
 export default function DenseTable() {
