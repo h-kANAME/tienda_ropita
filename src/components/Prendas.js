@@ -1,50 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../App.css';
 import '../css/Prendas.css'
-// import PrendasGrid from "./PrendasGrid.tsx";
-import PrendasService from "../services/PrendasService";
+import {PrendaService} from "../services/PrendaService";
 
-// function Prendas() {
-
-//   return (  
-//     // <PrendasGrid/>
-
-//     <div>asd</div>
-//   )
-// };
-// export default Prendas
-
-
-class Prendas extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      prendas: []
-    }
+export default class Prendas extends Component {
+  constructor() {
+    super();
+    this.state = {};
+    this.PrendaService = new PrendaService();
   }
-
   componentDidMount() {
-    PrendasService.getPrendas().then((response) => {
-      this.setState({ prendas: response.data});
-    });
+    this.PrendaService.getAll().then(data => {
+      console.log(data);
+    })
   }
 
+  // componentDidMount() {
+  //   this.PrendaService.getAll().then(data => this.setState({ prendas: data }))
+  // }
+  
   render() {
     return (
-      <div>
-
-      {
-        this.state.prendas.map(
-          prenda =>
-          <p key = {prenda.id}>{prenda.id}</p>
-        )
-      }
-      </div>
-
-    )
+      <div>Prendas</div>
+    );
   }
 
 }
-
-export default Prendas
