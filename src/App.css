@@ -1,6 +1,23 @@
-body {
-  background-color: rgb(113, 110, 110);
-  width: 70%;
+body{
+  background-color:black;
+  background-image: url('../src/img/T\ R.png');
+  background-repeat: space repeat-x;
+}
+
+.marco {
+  width: 60%;
   margin: 0 auto;
 }
 
+.HomeBoton {
+  text-decoration: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+text-align: center;
+}
+
+Button {
+  border-radius: 35;
+  background-color: "#21b6ae";
+  font-size: "18px";
+}

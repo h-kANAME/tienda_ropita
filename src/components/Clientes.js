@@ -13,17 +13,17 @@ import EditIcon from '@mui/icons-material/Edit';
 
 
 
-function Prendas() {
+function Clientes() {
 
-  const [prendas, setPrendas] = useState([])
+  const [clientes, setClientes] = useState([])
 
   useEffect(() => {
-    fetch('http://localhost:8090/tienda/api/prendas/all')
+    fetch('http://localhost:8090/tienda/api/clientes/all')
       .then((response) => {
         return response.json()
       })
-      .then((prendas) => {
-        setPrendas(prendas)
+      .then((clientes) => {
+        setClientes(clientes)
       })
   }, [])
 
@@ -39,20 +39,16 @@ function Prendas() {
             <TableCell>Producto</TableCell>
             <TableCell align="right">ID</TableCell>
             <TableCell align="right">Descripcion</TableCell>
-            <TableCell align="right">Precio</TableCell>
-            <TableCell align="right">Tipo Prenda</TableCell>
             <TableCell align="right">Eliminar</TableCell>
             <TableCell align="right">Modificar</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {prendas.map((row) => (
+          {clientes.map((row) => (
             <TableRow>
               <TableCell align="right">{row.id}</TableCell>
-              <TableCell align="right">{row.descripcion}</TableCell>
-              <TableCell align="right">{row.tipo}</TableCell>
-              <TableCell align="right">{row.precioBase}</TableCell>
-              <TableCell align="right">{row.precioFinal}</TableCell>
+              <TableCell align="right">{row.apellido}</TableCell>
+              <TableCell align="right">{row.razonSocial}</TableCell>
               <TableCell align="right"><DeleteForeverIcon/></TableCell>
               <TableCell align="right"><EditIcon/></TableCell>
             </TableRow>
@@ -64,4 +60,4 @@ function Prendas() {
   );
 }
 
-export default Prendas
+export default Clientes

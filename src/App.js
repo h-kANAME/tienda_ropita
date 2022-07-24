@@ -11,6 +11,7 @@ import Prendas from './components/Prendas';
 import Ventas from './components/Ventas';
 
 import { Checkroom, Storefront, People } from '@mui/icons-material/';
+import Button from '@mui/material/Button';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -25,41 +26,48 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="fixed">
+      <div className="marco">
         <Router>
-          <Grid container spacing={15}>
-            <Grid item sm={12}>
-              <Link to="/">
-                <Item>
+        <Grid item sm={10} class='HomeBoton'>
+              <Button component={Link} to={'/'} variant="contained" size="large"
+              style={{
+                borderRadius: 35,
+                backgroundColor: "#04293A"
+            }}>
                   <h1 className="titleHeader">Tienda Ropita</h1>
-                </Item>
-              </Link>
-            </Grid>
-
+              </Button>
+        </Grid>
+          <Grid style={{margin: 10}} container spacing={10}>
             <Grid item sm={4}>
-              <Link to="/Prendas">
-                <Item>
+            <Button component={Link} to={'/Prendas'} variant="contained" size="large"
+             style={{
+              borderRadius: 35,
+              backgroundColor: "#04293A"
+          }}>
                   <Checkroom />
                   <p>Prendas</p>
-                </Item>
-              </Link>
+            </Button>
             </Grid>
 
             <Grid item sm={4}>
-              <Link to="/Clientes">
-                <Item>
+            <Button component={Link} to={'/Clientes'} variant="contained" size="large"
+             style={{
+              borderRadius: 35,
+              backgroundColor: "#04293A"
+          }}>
                   <People />
                   <p>Clientes</p>
-                </Item>
-              </Link>
+            </Button>
             </Grid>
             <Grid item sm={4}>
-              <Link to="/Ventas">
-                <Item>
+            <Button component={Link} to={'/Ventas'} variant="contained" size="large"
+             style={{
+              borderRadius: 35,
+              backgroundColor: "#04293A"
+          }}>
                   <Storefront />
                   <p>Ventas</p>
-                </Item>
-              </Link>
+            </Button>
             </Grid>
           </Grid>
           <Routes>
